@@ -1,0 +1,449 @@
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/public/assets/fonts/static/Inconsolata-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/public/assets/fonts/static/Inconsolata-Bold.ttf")
+    format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/public/assets/fonts/static/Inconsolata-ExtraBold.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/public/assets/fonts/static/Inconsolata-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Variable font dosyası doğrudan /public/assets/fonts içinde */
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/public/assets/fonts/Inconsolata-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+  font-family: "Inconsolata", sans-serif;
+  background-image: url("/public/assets/images/background-desktop.png");
+  background-size: contain;
+  background-position: start;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 100vh;
+}
+
+.ticket-container {
+  position: relative;
+  margin-top: 5rem;
+  display: flex;
+  background-image: url("/public/assets/images/pattern-ticket.svg");
+  padding: 2rem;
+  padding-left: 5rem;
+  background-size: 100% 100%; /* Bilete tam oturtur */
+}
+.ticket-number {
+  position: absolute;
+  top: 40%;
+  right: 5%;
+  writing-mode: vertical-rl; /* Dikey yazım, sağdan sola */
+  text-orientation: upright; /* Harflerin düzgün görünmesini sağlar */
+  transform: rotate(90deg); /* 90 derece sağa döndür */
+  white-space: nowrap; /* Satır kaymasını engeller */
+  align-self: flex-start;
+  line-height: 0.7;
+}
+
+.ticket {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.ticket-head {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
+.ticket-head h2 {
+  color: hsl(0, 0%, 100%);
+}
+.ticket-head p {
+  font-size: 1.4rem;
+}
+.ticket-head img {
+  width: 3rem;
+}
+.ticket-head-info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+.ticket-footer {
+  display: flex;
+  gap: 1.5rem;
+}
+.ticket-footer img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5px;
+}
+.ticket-footer-right img {
+  width: 1.5rem;
+  height: auto;
+}
+.ticket-footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 3px;
+}
+
+.ticket-footer-right p {
+  color: hsl(0, 0%, 100%);
+  font-size: 2.2rem;
+}
+.ticket-footer-right-bottom {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.github-text {
+  font-size: 1.6rem;
+}
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url("/public/assets/images/pattern-lines.svg");
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+
+.left-bottom-svg {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 70rem; /* SVG'nin boyutunu istediğiniz gibi ayarlayın */
+  height: auto; /* Oranları korumak için */
+  z-index: 1; /* Diğer içeriklerin önünde yer almasını sağlar */
+}
+
+.left-bottom-svg img {
+  width: 70rem;
+  height: auto; /* Oranları korumak için */
+}
+
+.top-right-svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40rem; /* SVG'nin boyutunu istediğiniz gibi ayarlayın */
+  height: auto; /* Oranları korumak için */
+  z-index: 1; /* Diğer içeriklerin önünde yer almasını sağlar */
+}
+
+.top-right-svg img {
+  width: 40rem;
+}
+
+.center-svg {
+  position: absolute;
+  top: 50%;
+  left: 61%;
+  width: 40rem; /* SVG'nin boyutunu istediğiniz gibi ayarlayın */
+  height: auto; /* Oranları korumak için */
+  z-index: 1; /* Diğer içeriklerin önünde yer almasını sağlar */
+}
+
+.center-svg img {
+  width: 15rem; /* SVG'nin boyutunu istediğiniz gibi ayarlayın */
+}
+
+.center-container {
+  text-align: center;
+  padding: 2.5rem;
+  width: 60rem;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  color: hsl(252, 6%, 83%);
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.header {
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  font-weight: bold;
+}
+
+.header img {
+  width: 13rem;
+}
+p {
+  font-size: 1.8rem;
+}
+
+.submit-info {
+  width: 50rem;
+}
+.form-container {
+  /* background-color: greenyellow; */
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.3rem;
+}
+.form-row {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+.form-element {
+  background-color: hsla(245, 19%, 35%, 0.3);
+  width: 30rem;
+  border: 1px solid hsl(245, 15%, 58%);
+  border-radius: 5px;
+  text-align: start;
+  color: hsl(252, 6%, 83%);
+}
+.upload-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px dashed hsl(245, 15%, 58%);
+}
+
+.upload-element img {
+  height: 2rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.upload-img-container {
+  height: 3.3rem;
+  width: 3.3rem;
+  background-color: hsla(245, 19%, 35%, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px dashed hsla(245, 19%, 35%);
+}
+.preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-text {
+  font-size: 1.2rem;
+  color: hsl(245, 15%, 78%);
+}
+input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: hsl(252, 6%, 83%);
+  padding: 1rem;
+  position: relative; /* Katmanlar arasında sıralamayı sağlamak için */
+  z-index: 10; /* Daha yüksek bir değer vererek üstte olmasını sağla */
+}
+
+.footer-info {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 1.1rem;
+  color: hsl(245, 15%, 58%);
+}
+
+.error-message {
+  color: hsl(7, 71%, 60%);
+}
+
+.footer-info img {
+  filter: invert(25%) sepia(15%) saturate(200%) hue-rotate(245deg);
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-button {
+  font-size: 1.4rem;
+  text-align: center;
+  background-color: hsl(7, 88%, 67%);
+  cursor: pointer;
+  color: hsl(248, 70%, 10%);
+  font-weight: 800;
+  padding: 1rem 1rem;
+  border-radius: 7px;
+  border: none;
+  z-index: 10;
+}
+
+.red-text {
+  color: hsl(7, 86%, 67%);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-div {
+  margin-top: 4rem;
+  font-size: 4.5rem;
+  color: hsl(0, 0%, 100%);
+  line-height: 1.1;
+}
+
+/* Tablet için */
+@media (max-width: 1024px) {
+  body {
+    background-image: url("/public/assets/images/background-tablet.png");
+  }
+  .left-bottom-svg {
+    width: 50rem; /* Mobil için daha da küçültüldü */
+  }
+  .left-bottom-svg img {
+    width: 50rem; /* Mobil için daha da küçültüldü */
+  }
+}
+
+/* Mobil için */
+@media (max-width: 769px) {
+  body {
+    background-image: url("/public/assets/images/background-mobile.png");
+  }
+  .left-bottom-svg {
+    width: 30rem; /* Mobil için daha da küçültüldü */
+  }
+  .left-bottom-svg img {
+    width: 30rem; /* Mobil için daha da küçültüldü */
+  }
+  .center-container,
+  .form-container {
+    width: 30rem;
+    padding: 0;
+  }
+  .form-container {
+    padding-bottom: 1rem;
+  }
+
+  .center-container {
+    padding-top: 2.5rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .center-svg {
+    display: none;
+  }
+  .top-right-svg {
+    width: 15rem;
+  }
+  .top-right-svg img {
+    width: 15rem;
+  }
+  input {
+    z-index: 100;
+    padding: 1.5rem;
+  }
+
+  .center-container h1 {
+    font-size: 2.5rem;
+  }
+  .center-container p {
+    font-size: 1.8rem;
+  }
+  P.upload-text {
+    font-size: 1.4rem;
+  }
+  .gradient-div {
+    margin-top: 2rem;
+    font-size: 2.3rem;
+  }
+  .submit-info {
+    width: 25rem;
+    font-size: 1.3rem;
+  }
+
+  .submit-center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ticket-container {
+    margin-top: 4rem;
+    padding-left: 1rem;
+    width: 30rem;
+  }
+  .ticket-head h2 {
+    font-size: 2rem;
+  }
+  .ticket-head p {
+    font-size: 1rem;
+  }
+  .ticket-head img {
+    width: 2rem;
+  }
+  .ticket {
+    gap: 3rem;
+  }
+
+  .image-avatar {
+    width: 7rem;
+    height: 7rem;
+  }
+  .ticket-number {
+    right: -5%;
+  }
+}
