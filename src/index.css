@@ -195,7 +195,7 @@ body {
 .center-container {
   text-align: center;
   padding: 2.5rem;
-  width: 60rem;
+  width: 100rem;
   /* background-color: red; */
   display: flex;
   flex-direction: column;
@@ -206,6 +206,7 @@ body {
 }
 
 .header {
+  margin-top: 3rem;
   color: hsl(0, 0%, 100%);
   display: flex;
   gap: 1.2rem;
@@ -214,7 +215,7 @@ body {
 }
 
 .header img {
-  width: 13rem;
+  width: 30rem;
 }
 p {
   font-size: 1.8rem;
@@ -241,11 +242,15 @@ p {
 }
 .form-element {
   background-color: hsla(245, 19%, 35%, 0.3);
-  width: 50rem;
+  width: 40rem;
   border: 1px solid hsl(245, 15%, 58%);
   border-radius: 5px;
   text-align: start;
   color: hsl(252, 6%, 83%);
+}
+.header-text {
+  margin-top: 3rem;
+  font-size: 6rem;
 }
 .upload-element {
   display: flex;
@@ -455,5 +460,11 @@ input {
   }
   .form-element {
     width: 30rem;
+  }
+  .header img {
+    width: 13rem;
+  }
+  .header-text {
+    font-size: 2rem;
   }
 }

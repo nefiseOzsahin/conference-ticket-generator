@@ -156,7 +156,9 @@ export default function App() {
               <span>! Your ticket is ready.</span>
             </div>
           ) : (
-            "Your Journey to Coding Conf 2025 Starts Here!"
+            <div className="header-text">
+              Your Journey to Coding Conf 2025 Starts Here!
+            </div>
           )}
         </h1>
         {Object.keys(ticket).length > 0 || (
