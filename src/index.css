@@ -344,6 +344,13 @@ input {
   color: hsl(0, 0%, 100%);
   line-height: 1.1;
 }
+.error {
+  border-color: hsl(7, 71%, 60%);
+}
+.form-element:hover {
+  outline: 2px solid hsl(245, 15%, 58%); /* Hover durumunda kırmızı bir dış çizgi ekler */
+  outline-offset: 5px; /* Outline ile border arasında 5px boşluk bırakır */
+}
 
 /* Tablet için */
 @media (max-width: 1024px) {

@@ -224,7 +224,11 @@ export default function App() {
           <form className="form-container" onSubmit={handleSubmit}>
             <div className="form-row ">
               <div className="form-info "> Upload Avatar</div>
-              <div className="form-element upload-element">
+              <div
+                className={`form-element upload-element ${
+                  errors.image ? "error" : ""
+                }`}
+              >
                 <label htmlFor="file-upload" className="upload-img-container">
                   {preview ? (
                     <img src={preview} alt="Preview" className="preview-img" />
@@ -257,7 +261,7 @@ export default function App() {
             </div>
             <div className="form-row">
               <div className="form-info">Full Name</div>
-              <div className="form-element">
+              <div className={`form-element ${errors.name ? "error" : ""}`}>
                 <input
                   type="text"
                   value={name}
@@ -275,7 +279,7 @@ export default function App() {
             </div>
             <div className="form-row">
               <div className="form-info">Email Address</div>
-              <div className="form-element">
+              <div className={`form-element ${errors.email ? "error" : ""}`}>
                 <input
                   type="text"
                   placeholder="example@email.com"
@@ -294,7 +298,11 @@ export default function App() {
             </div>
             <div className="form-row">
               <div className="form-info">GitHub Username</div>
-              <div className="form-element">
+              <div
+                className={`form-element ${
+                  errors.githubusername ? "error" : ""
+                }`}
+              >
                 <input
                   type="text"
                   placeholder="@yourusername"
